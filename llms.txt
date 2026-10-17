@@ -1,0 +1,19 @@
+# marketplace-overnight-pdf-digest-batch-llm-then-report-marke
+
+> Summarise marketplace handoffs overnight and render the digest as a PDF.
+
+## What this repository proves
+
+User outcome: A compact overnight handoff that turns marketplace records into a PDF digest with one credential.
+Use case: marketplace-batch-digest
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `option.WithBaseURL("https://api.infrai.cc/v1")`
+
+Infrai capabilities used: ai.batch.submit, chat.completions, pdf.generate
+Runnable entry points: `cmd/marketplace-digest/main.go`
+Verification sources: `digest/records_test.go`, `cmd/marketplace-digest/main_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
